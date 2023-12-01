@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwcq03h15loaw"]
+
+[ext_resource type="Script" path="res://Scenes/pause_menu.gd" id="1_1cs87"]
+[ext_resource type="FontFile" uid="uid://cv7ixh4cfvvhh" path="res://Silver.ttf" id="1_dsgju"]
+
+[sub_resource type="Theme" id="Theme_mmuee"]
+default_font = ExtResource("1_dsgju")
+default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_25bfa"]
+default_font = ExtResource("1_dsgju")
+default_font_size = 36
+
+[node name="Pause_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1cs87")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_mmuee")
+text = "Resume"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_25bfa")
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

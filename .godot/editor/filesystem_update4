@@ -1,0 +1,13 @@
+res://levels/level_1.tscn
+res://shaders/transition_shader.gdshader
+res://shaders/transition.gdshader
+res://levels/level_2.tscn
+res://levels/level_3.tscn
+res://actors/player.tscn
+res://actors/snail.tscn
+res://prefabs/bullet.tscn
+res://prefabs/spawner.tscn
+res://Scenes/menu.tscn
+res://Scenes/Credits.tscn
+res://Scenes/pause_menu.tscn
+res://Scenes/controls.tscn

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpn7rygp14fyk"]
+
+[ext_resource type="Script" path="res://prefabs/spikes_area.gd" id="1_27ylb"]
+[ext_resource type="Texture2D" uid="uid://umdwsjrro1yg" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_iyxyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2ujv"]
+size = Vector2(7, 7)
+
+[node name="SpikesArea" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_27ylb")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j2ujv")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_iyxyc")
+region_enabled = true
+region_rect = Rect2(0, 8, 8, 8)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbmdswjv2dlm3"]
+
+[ext_resource type="FontFile" uid="uid://cv7ixh4cfvvhh" path="res://Silver.ttf" id="1_1no1v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gceaa"]
+font = ExtResource("1_1no1v")
+font_size = 64
+font_color = Color(0.917647, 0, 0.141176, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_hmxwi"]
+default_font = ExtResource("1_1no1v")
+default_font_size = 32
+
+[sub_resource type="Theme" id="Theme_1mg3q"]
+default_font = ExtResource("1_1no1v")
+default_font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.509804)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.5
+offset_right = 88.5
+offset_bottom = 72.0
+grow_horizontal = 2
+text = "Game Over"
+label_settings = SubResource("LabelSettings_gceaa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.5
+offset_top = -72.0
+offset_right = 23.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme = SubResource("Theme_hmxwi")
+text = "Quit"
+
+[node name="Try Again" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = -36.0
+offset_right = 88.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1mg3q")
+text = "Try Again"
